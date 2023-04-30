@@ -24,7 +24,7 @@ import androidx.compose.ui.tooling.preview.Preview
 
 @Composable
 fun DeriveStateOf() {
-    //只重组一次 derive
+    //处理remember name 的问题，某些不会重组的情况
     val highPriorityKeywords: List<String> = listOf("Review", "Unblock", "Compose")
     var other by remember {
         mutableStateOf("other1")
