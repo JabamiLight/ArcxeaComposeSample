@@ -11,7 +11,9 @@ package mvi.ui
 import android.util.Log
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.SideEffect
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.rememberUpdatedState
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.lifecycle.compose.ExperimentalLifecycleComposeApi
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
@@ -26,6 +28,7 @@ fun TestMviPage(viewmodel: WhatsAppCallsViewModel= viewModel()) {
     val whatsAppUsersUiState by viewmodel.whatsAppUserState.collectAsStateWithLifecycle()
     Log.d("tedu","重组")
     extracted(whatsAppUsersUiState)
+    rememberUpdatedState()
 }
 
 @Composable
