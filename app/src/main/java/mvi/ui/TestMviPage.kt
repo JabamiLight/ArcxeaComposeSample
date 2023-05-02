@@ -28,7 +28,6 @@ fun TestMviPage(viewmodel: WhatsAppCallsViewModel= viewModel()) {
     val whatsAppUsersUiState by viewmodel.whatsAppUserState.collectAsStateWithLifecycle()
     Log.d("tedu","重组")
     extracted(whatsAppUsersUiState)
-    rememberUpdatedState()
 }
 
 @Composable
