@@ -16,6 +16,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.core.view.WindowCompat
 import com.example.app.ui.components.NavHostApp
 import com.example.app.ui.screens.MainFrame
+import com.example.app.ui.screens.Test1
 import com.example.app.ui.theme.APPTheme
 import com.google.accompanist.insets.ProvideWindowInsets
 
@@ -45,8 +46,9 @@ class MainActivity : ComponentActivity() {
                     color = MaterialTheme.colors.background
                 ) {
                     //状态栏预设
-                    ProvideWindowInsets() {
-                        NavHostApp()
+                    ProvideWindowInsets {
+//                        NavHostApp()
+                        Test1()
                     }
                 }
             }
